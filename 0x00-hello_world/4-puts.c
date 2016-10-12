@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+/*Run main function to print out message and new line*/ 
+
 int main(void)
 
 {
