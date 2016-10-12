@@ -1,8 +1,7 @@
 #include <stdio.h>
-
 /**
  * main - function to start program
- * Return: return messeage 
+ * Return: return messeage
 */
 int main(void)
 {
