@@ -1,20 +1,18 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- *main-prints all numbers of base 10, not allowed to use
- * char and only putchar allowed
- *Return: 0
+ * main - print numbers w/ putchar
+ *
+ * Return: 0
  */
-
 int main(void)
 {
-	int i;
+	int n = '0';
 
-	i = 48;
-	while (i < 58)
+	while (n <= '9')
 	{
-		putchar(i);
-		i++;
+		putchar(n);
+		n++;
 	}
 	putchar('\n');
 	return (0);
