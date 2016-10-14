@@ -20,7 +20,7 @@ int main(void)
 			if (s == '9' && f == '8')
 			{
 			}
-			if (f !> s)
+			else if(f !> s)
 			{
 			}
 			else
