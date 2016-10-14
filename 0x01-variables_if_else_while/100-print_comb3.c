@@ -12,21 +12,18 @@ int main(void)
 
 	while (f <= '8')
 	{
-		s = '0';
+		s = '1';
 		while (s <= '9')
 		{
+			if (f < s)
+			{
 			putchar(f);
 			putchar(s);
-			if (s == '9' && f == '8')
-			{
-			}
-			else if(f !> s)
-			{
-			}
-			else
+			if (f != '8' || s != '9')
 			{
 				putchar(',');
 				putchar(' ');
+			}
 			}
 			s++;
 		}
