@@ -1,6 +1,7 @@
 #include <unistd.h>
 /**
- * main to start program
+ * main-to start program
+ * Return: 1
  */
 
 int main(void)
