@@ -16,6 +16,10 @@ int main(void)
 	{
 		for (b = '0' ; b <= '9' ; b++)
 		{
+			if (a == '9' && b == '9')
+			{
+				break;
+			}
 			for (c = '0' ; c <= '9' ; c++)
 			{
 				if (a == c)
