@@ -1,6 +1,12 @@
 #include "holberton.h"
 
-void print_alphabet(void);
+/**
+ * print_alphabet - print out alphabet is lowercase
+ *
+ * Return: 0; 
+ */
+
+void print_alphabet(void)
 {
 	int a;
 
