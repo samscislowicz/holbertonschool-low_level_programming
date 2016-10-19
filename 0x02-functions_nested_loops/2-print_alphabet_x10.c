@@ -3,27 +3,18 @@
 /**
  * main - check the code for Holberton School students.
  *
- * Return: Always 0.
+ * Return: none
  */
-void print_alphabet(void);
-
 void print_alphabet_x10(void)
 {
-	int i;
+	int i, a;
 
 	for (i = 0; i <= 9; i++)
 	{
-		print_alphabet();
+		for (a = 'a'; a <= 'z'; a++)
+		{
+			_putchar(a);
+		}
+		_putchar('\n');
 	}
 }
-
-void print_alphabet(void)
-{
-	int a;
-
-	for (a = 'a'; a <= 'z'; a++)
-	{
-		_putchar(a);
-	}
-	_putchar('\n');
-		}
