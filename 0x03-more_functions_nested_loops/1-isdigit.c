@@ -2,7 +2,7 @@
 
 /**
  * _isdigit - check for a digit 0-9
- *
+ * @c: character to be returned
  * Return: 1 if c is a digit 0 otherwise
  */
 int _isdigit(int c)
