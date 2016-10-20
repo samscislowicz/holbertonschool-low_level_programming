@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - printing main
  *
  * Return: nothing
  */
+
 int main(void)
 {
 	int i;
@@ -14,8 +16,8 @@ int main(void)
 		if (i % 5 == 0)
 			printf("Buzz");
 		if ((i % 3 != 0) && (i % 5 != 0))
-			printf("number=%d", i);
-		printf("\n");
+			printf("%d", i);
+		printf(" ");
 	}
 	return 0;
 }
