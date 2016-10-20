@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
-* print_most_numbers
-* @a: variable
+* print_most_numbers - print 0 -9 minus 2 and 4
+*
 * Return: nothing
 */
 void print_most_numbers(void)
