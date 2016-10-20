@@ -1,0 +1,21 @@
+#include "holberton.h"
+/**
+ * main - to check if letter is upper
+ *
+ * Return: 1 or 0
+ */
+
+int _isupper(int c);
+int c;
+{
+	if (c = 'A')
+	{
+		_putchar ("/n")
+			return (1)
+			}
+	else (c = 'a')
+	{
+		_putchar ("/n")
+			return (0)
+			}
+}
