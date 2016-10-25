@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * puts2: prints out 2 of a string
+ * _strlen - returns the length of a given string
  * @str: input string
  * Return: one char
  */
