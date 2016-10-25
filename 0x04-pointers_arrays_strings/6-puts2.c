@@ -7,10 +7,31 @@
  */
 void puts2(char *str)
 {
-	while (*str != 0)
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+
+/**
+ * puts2 - prints every other character in a string
+ *
+ * @str: string to print
+ * Return: void
+ */
+
+void puts2(char *str)
+{
+	int i;
+
+	i = 0;
+	while (i < _strlen(str))
 	{
-		_putchar(*str);
-		str = str + 2;
+		_putchar(str[i]);
+		i += 2;
 	}
-	_putchar('\n');
+	_putchar(10);
 }
