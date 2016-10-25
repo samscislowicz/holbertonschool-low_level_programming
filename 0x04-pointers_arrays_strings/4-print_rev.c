@@ -5,22 +5,15 @@
  * Return: string in reverse
  */
 
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int i;
-	char array[100];
 
 	i = 0;
-	while (*s != 0)
-	{
-		array[i] = *s;
+	while (s[i] != '\0')
 		i++;
-		s++;
-	}
+	i--;
 	while (i >= 0)
-	{
-		_putchar(array[i]);
-		i++;
-	{
-		_putchar('\n');
+		_putchar(s[i--]);
+	_putchar(10);
 }
