@@ -5,7 +5,7 @@
  * @str: input string
  * Return: one char
  */
-void puts2(char *str)
+int _strlen(char *s)
 {
 	int i;
 
