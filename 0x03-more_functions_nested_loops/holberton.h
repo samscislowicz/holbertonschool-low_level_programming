@@ -1,6 +1,3 @@
-#ifndef HOLBERTON_H_INCLUDED
-#define HOLBERTON_H_INCLUDED
-
 int _isupper(int c);
 /**Task 0*/
 int _isdigit(int c);

@@ -1,32 +1,76 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
 
 /**
- *str_concat - returns a pointer that contains a string
- * that is a combination of two strings
- * @s1: string 1
- * @s2: string 2
- * Return: pointer to the concatenated string
+ * _memset - simple version of memset()
+ * @s: buffer to modify
+ * @b: value to modify buffer with
+ * @n: number of bytes pointed to by s to modify with char b
+ *
+ * Return: pointer to buffer, s
  */
-
-char *str_concat(char *s1, char *s2)
+int *_memset(int *s, int b, int n)
 {
-	char *str;
-	int i, j, k;
+	int i;
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-	str = malloc((i + j) * sizeof(*str));
-	for (k = 0; s1[k] != '\0'; k++)
-		str[k] = s1[k];
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		str[k] = s2[j];
-		j++;
-		k++;
-	}
-	return (str);
+	if (s == NULL)
+		return (NULL);
+
+	i = 0;
+	while (i < n && (s + i) != NULL)
+		*(s + i++) = b;
+	if (s == NULL)
+		return (NULL);
+
+
+	return (s);
 }
+
+/**
+ * alloc_grid - return a pointer to a newly created 2 dim integer grid
+ * @width: width of grid or columns
+ * @height: height of grid or columns
+ * Return: pointer to grid on success, or NULL
+ */
+int **alloc_grid(int width, int height)
+{
+	int **a, i;
+
+	if (width <= 0 || height <= 0)
+		return (NULL);
+	a = malloc(height * sizeof(*a));
+	if (a == NULL)
+		return (NULL);
+
+	i = 0;
+	while (i < height)
+	{
+		a[i] = malloc(width * sizeof(**a));
+		if (a[i] == NULL)
+		{
+			while (--i >= 0)
+				free(a[i]);
+			free(a);
+			return (NULL);
+			a[i] = _memset(a[i], 0, width);
+		}
+		i++;
+	}
+	return (a);
+}
+
+/*This is not passing the free check unfortunately*/
+/* *a = malloc(sizeof(int) * width * height);
+ *   if (*a == NULL)
+ *  {
+ *  free(a);
+ *  return (NULL);
+ *  }
+ *  i = 0;
+ *  while (i <= height)
+ *  {
+ *  a[i] = (*a + width * i);
+ *  i++;
+ *  }
+ */
