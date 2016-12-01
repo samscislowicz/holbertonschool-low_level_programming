@@ -39,4 +39,9 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index
 (listint_t **head, unsigned int index, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+void free_listptr(listptr_t *head);
+size_t free_listint_safe(listint_t **h);
+void free_list2(listint_t **head);
+void free_list(listptr_t *head);
+void free_listrange(listint_t **h, listint_t *to);
 #endif
