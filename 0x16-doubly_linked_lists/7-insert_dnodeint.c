@@ -34,8 +34,16 @@ dlistint_t *insert_dnodeint_at_idx(dlistint_t **head, unsigned int idx, int n)
 		i++;
 	}
 	newnode->next = walk;
-	newnode->prev = walk->prev;
-	(walk->prev)->next = newnode;
+	if (idx != 0)
+	{
+		newnode->prev = walk->prev;
+		(walk->prev)->next = newnode;
+	}
+	else
+	{
+		newnode->prev = NULL;
+		*head = newnode;
+	}
 	walk->prev = newnode;
 	return (newnode);
 }
