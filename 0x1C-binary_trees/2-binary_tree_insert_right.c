@@ -2,13 +2,14 @@
 
 /**
  * binary_tree_insert_right - inserts a node as the right-child of another node
- * @parent:
- * @value:
- * Return:
+ * @parent: The parent node
+ * @value: The number to be evaluated
+ * Return: The newly malloced node
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new_node, *tmp;
+
 	new_node = malloc(sizeof(binary_tree_t));
 	if (!new_node)
 		return (NULL);
